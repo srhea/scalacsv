@@ -1,0 +1,16 @@
+scalacsv - A CSV parser in Scala
+
+Simple, easy to use, hopefully correct.
+
+Parsing from a string:
+
+  scala> val rows = CSV.fromString("foo,bar\nfoz,baz")
+  rows: Vector[Vector[String]] = Vector(Vector(foo, bar), Vector(foz, baz))
+
+Parsing from a file:
+
+  scala> val rows = CSV.fromFile("foo.csv")
+  rows: Vector[Vector[String]] = Vector(Vector(foo, bar), Vector(foz, baz))
+
+Includes tests against files exported from Google Docs and Excel 2008 for Mac.
+Please send me short test files from any other programs you want supported.
